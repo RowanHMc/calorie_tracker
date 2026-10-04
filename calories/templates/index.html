@@ -70,12 +70,12 @@
             <p class="text-sm text-gray-500"> {{ food.calories }} kcal</p>
         </div>
 
-        <button
-            type="button"
+        <a
+            href="{% url 'delete_food' food_id%}"
             class="text-red-600 hover:text-red-800 text-sm font-medium"
         >
             Remove
-        </button>
+        </a>
     </div>
 
     {% empty %}

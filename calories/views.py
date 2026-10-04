@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Food
 
 # Create your views here.
@@ -23,3 +23,7 @@ def home(request):
                     "foods":foods,
                     "total_calories": total_calories
                    })
+def delete_food(request, food_id):
+    food = Food.objects.get(id=food_id)
+    food.delete()
+    return redirect("home")
