@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import food
+from .models import Food
 
 # Create your views here.
 #function for home page
@@ -9,8 +9,12 @@ def home(request):
         name = request.POST["name"]
         calories = request.POST["calories"]
 
-        food.objects.create(
+        Food.objects.create(
             name=name,
             calories=calories
         )
-    return render(request, "index.html")
+
+    foods = Food.objects.all()
+
+
+    return render(request, "index.html", {"foods":foods})

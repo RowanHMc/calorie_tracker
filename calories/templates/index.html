@@ -62,10 +62,12 @@
         Today's Food
     </h3>
 
+    {% for food in foods %}
+
     <div class="flex items-center justify-between border-b border-gray-200 py-4">
         <div>
-            <p class="font-medium text-gray-800">Banana</p>
-            <p class="text-sm text-gray-500">105 kcal</p>
+            <p class="font-medium text-gray-800"> {{ food.name }}</p>
+            <p class="text-sm text-gray-500"> {{ food.calories }} kcal</p>
         </div>
 
         <button
@@ -76,18 +78,11 @@
         </button>
     </div>
 
-    <div class="flex items-center justify-between border-b border-gray-200 py-4">
-        <div>
-            <p class="font-medium text-gray-800">Chicken</p>
-            <p class="text-sm text-gray-500">350 kcal</p>
-        </div>
+    {% empty %}
 
-        <button
-            type="button"
-            class="text-red-600 hover:text-red-800 text-sm font-medium"
-        >
-            Remove
-        </button>
+    <p class="text-gray-500">No food itemms added  </p>
+
+    {% endfor %}
     </div>
 
 </div>
