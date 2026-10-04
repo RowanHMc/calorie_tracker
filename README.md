@@ -10,18 +10,12 @@ A simple web-based calorie tracking application built with Django. The applicati
 * Automatically calculate total daily calories.
 * Remove individual food items.
 * Reset the entire daily calorie record.
-* Responsive and clean user interface using Tailwind CSS.
-* Django template inheritance using a reusable base template.
-
+* 
 ## Technologies Used
 
-* **Python 3**
-* **Django**
-* **SQLite**
-* **HTML5**
-* **Tailwind CSS**
-* **Django Template Language**
-* **Git & GitHub**
+* Python 
+* Django
+* SQLite
 
 ## Project Structure
 
@@ -89,55 +83,32 @@ git clone <your-repository-url>
 
 Move into the project directory:
 
-```bash
-cd calorie-tracker
-```
-
 ### 2. Create a Virtual Environment
 
-Windows:
-
-```bash
 python -m venv venv
-```
+
 
 Activate it:
 
-```bash
 venv\Scripts\activate
-```
 
 ### 3. Install Django
 
-```bash
 pip install django
-```
 
 ### 4. Apply Database Migrations
 
-Run:
-
-```bash
 python manage.py makemigrations
-```
 
 Then:
-
-```bash
 python manage.py migrate
-```
+
 
 ### 5. Start the Development Server
 
-```bash
 python manage.py runserver
-```
 
 Open the development server in your browser:
-
-```text
-http://127.0.0.1:8000/
-```
 
 ## Using the Application
 
@@ -149,24 +120,6 @@ http://127.0.0.1:8000/
 6. The total calorie count will update automatically.
 7. Use **Remove** to delete an individual food item.
 8. Use **Reset Day** to clear all food records after confirming the action.
-
-## Django Components
-
-### Model
-
-The `Food` model in `models.py` defines the structure of the food data stored in the database.
-
-### Views
-
-The application logic is handled in `views.py`, including:
-
-* Adding food
-* Retrieving food records
-* Calculating total calories
-* Removing food
-* Resetting the daily record
-
-
 
 ## Future Improvements
 
