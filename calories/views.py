@@ -15,6 +15,11 @@ def home(request):
         )
 
     foods = Food.objects.all()
+    total_calories = sum(food.calories for food in foods)
 
-
-    return render(request, "index.html", {"foods":foods})
+    return render( request,
+                   "index.html",
+                   {
+                    "foods":foods,
+                    "total_calories": total_calories
+                   })
