@@ -27,3 +27,7 @@ def delete_food(request, food_id):
     food = Food.objects.get(id=food_id)
     food.delete()
     return redirect("home")
+
+def reset(request):
+    Food.objects.all().delete()
+    return redirect("home")
